@@ -1,23 +1,19 @@
-#include<stdio.h>
+#include <stdio.h>
+
 /**
- * main - writing all the number for base 16
+ * main - lowercase alphabet reverse mode
  *
- * Return: 0 always
- *
+ * Return: always 0 (success)
  */
 
-int main(void)
+	int main(void)
 {
-	int z = 0;
+	char letter;
 
-	while (z < 48)
-	{
-	if (z < 10)
-	putchar(z + '0');
-	else if (z > 41)
-	putchar (z - 10 + 'A');
-	z++;
-	}
-	putchar(10);
+	for (letter = 'z'; letter >= 'a'; letter--)
+		putchar(letter);
+
+	putchar('\n');
+
 	return (0);
 }
