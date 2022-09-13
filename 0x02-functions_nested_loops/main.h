@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <cs50.h>
+#ifndf HOLBERTON_H_INCLUDEED
+#define HOLBERTON_H_INCLUDED
 
 int _putcher(char);
 void print_alphabet(void);
