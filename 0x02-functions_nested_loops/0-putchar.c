@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * main - print putcher
+ * main - print putchar
  * Return: always 0
  */
+
 int main(void)
 {
 	_putchat('_');
