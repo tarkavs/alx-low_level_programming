@@ -7,9 +7,9 @@
 
 int main(void)
 {
-	_putchat('_');
+	_putchar('_');
 	_putchar('p');
-	_putchet('u');
+	_putcher('u');
 	_putchar('t');
 	_putchar('c');
 	_putchar('h');
