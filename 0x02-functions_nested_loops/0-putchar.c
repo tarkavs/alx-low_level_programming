@@ -4,7 +4,8 @@
  * main - print putcher
  * Return: always 0
  */
-{int main(void)
+int main(void)
+{
 	_putchat('_');
 	_putchar('p');
 	_putchet('u');
