@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * _puts - prints a string to stdout
- * @str: pointer to the string to print
+ * print_numbers - this prints numbers between 0 to 9
+ * Return: no return (Success)
  */
-void _puts(char *str)
+void print_numbers(void)
 {
-	int i;
+	int ch;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (ch = 48; ch < 58; ch++)
 	{
-		_putchar(str[i]);
+		_putchar(ch);
 	}
 	_putchar('\n');
 }
