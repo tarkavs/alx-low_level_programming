@@ -1,19 +1,18 @@
 #include "main.h"
-#include <unistd.h>
-
+#include "holberton.h"
+#include "2-strlen.c"
 /**
- *_puts - prints a string, to stdout
- *@str: value to be evaluate.
- *Return: not.
+ * _puts - puts a string
+ *
+ * @str: string to print
  */
 void _puts(char *str)
 {
-	int l = 0;
+	int i;
 
-	while (*(str + l) != '\0')
+	for (i = 0; *(str + i) != '\0'; i++)
 	{
-		_putchar(str[l]);
-		l++;
+		_putchar(*(str + i));
 	}
 	_putchar('\n');
 }
