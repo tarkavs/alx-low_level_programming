@@ -1,37 +1,39 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * _atoi - function that convert a string to an integer
- * @s: string to be converted
- * Return: integer of converted string
+ * main - prints the minimum number of coins to make change for an amount.
+ * of money.
+ * @argc: number of command line arguments.
+ * @argv: array that contains the program command line arguments.
+ * Return: 0 - success.
  */
 
-int _atoi(char *s)
+int main(int argc, char *argv[])
 {
-	int a, i;
-	unsigned int res = 0;
+	int cents, numCoins = 0;
 
-	for (a = 0; s[a]; a++)
+	if (argc == 1 || argc > 2)
 	{
-		if (s[a] >= '0' && s[a] <= '9')
-		{
-			res = (res * 10) + s[a] - '0';
-			if (!(s[a + 1] >= '0' && s[a + 1] <= '9'))
-			{
-				break;
-			}
-		}
+		printf("Error\n");
+		return (1);
 	}
-	for (i = 0; s[i]; i++)
+	cents = atoi(argv[1]);
+	while (cents > 0)
 	{
-		if (s[i] == '-')
-		{
-			res = res * -1;
-			if (s[i + 1] >= '0' && s[i + 1] <= '9')
-			{
-				break;
-			}
-		}
+		if (cents >= 25)
+			cents -= 25;
+		else if (cents >= 10)
+			cents -= 10;
+		else if (cents >= 5)
+			cents -= 5;
+		else if (cents >= 2)
+			cents -= 2;
+		else if (cents >= 1)
+			cents -= 1;
+		numCoins += 1;
 	}
-	return (res);
+	printf("%d\n", numCoins);
+	return (0);
 }
+
